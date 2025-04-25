@@ -2,7 +2,7 @@ package MediatorPattern.Planes;
 
 import MediatorPattern.TowerMediator;
 
-class PassengerPlane extends Aircraft {
+public class PassengerPlane extends Aircraft {
     public PassengerPlane(String id, TowerMediator mediator, int fuelLevel, boolean takingOff) {
         super(id, mediator, fuelLevel, takingOff);
     }

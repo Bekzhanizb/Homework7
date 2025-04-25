@@ -119,4 +119,7 @@ public class ControlTower implements TowerMediator {
             dashboard.addLogEntry(message);
         }
     }
+    public List<Aircraft> getAllAircraft() {
+        return Collections.unmodifiableList(allAircraft);
+    }
 }
