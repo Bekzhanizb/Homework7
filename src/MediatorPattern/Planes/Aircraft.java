@@ -28,6 +28,10 @@ public abstract class Aircraft {
         mediator.broadcast(msg, this);
     }
 
+    public int getFuelLevel() {
+        return fuelLevel;
+    }
+
     public void requestRunway() {
         if (mediator.requestRunway(this)) {
             System.out.println(id + ": Runway access granted");
