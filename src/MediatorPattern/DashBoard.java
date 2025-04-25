@@ -50,28 +50,23 @@ public class DashBoard extends Application implements TowerDashboard {
         VBox rightPanel = new VBox(10);
         VBox leftPanel = new VBox(10);
 
-        // Status bar
         runwayStatusLabel = createStatusLabel("Runway: Available", Color.LIGHTGREEN);
         landingQueueLabel = createStatusLabel("Landing Queue: 0", Color.LIGHTGRAY);
         takeoffQueueLabel = createStatusLabel("Takeoff Queue: 0", Color.LIGHTGRAY);
 
-        // Log area
         logArea = new TextArea();
         logArea.setEditable(false);
         logArea.setWrapText(true);
 
-        // Aircraft list
         aircraftListView = new ListView<>(aircraftList);
         aircraftListView.setPrefWidth(250);
 
         Label aircraftTitle = new Label("Registered Aircraft:");
         aircraftTitle.setStyle("-fx-font-weight: bold; -fx-font-size: 14;");
 
-        // Control panel
         Label controlTitle = new Label("Aircraft Control:");
         controlTitle.setStyle("-fx-font-weight: bold; -fx-font-size: 14;");
 
-        // Aircraft creation controls
         Label createLabel = new Label("Create New Aircraft:");
         aircraftTypeCombo = new ComboBox<>(FXCollections.observableArrayList(
                 "Passenger Plane", "Cargo Plane", "Helicopter"));
@@ -92,7 +87,6 @@ public class DashBoard extends Application implements TowerDashboard {
         Button createButton = new Button("Create Aircraft");
         createButton.setOnAction(e -> createAircraft());
 
-        // Aircraft control
         Label controlLabel = new Label("Control Aircraft:");
         aircraftSelector = new ComboBox<>(aircraftObservableList);
         aircraftSelector.setCellFactory(param -> new ListCell<Aircraft>() {
@@ -137,7 +131,6 @@ public class DashBoard extends Application implements TowerDashboard {
         Button sendMessageButton = new Button("Send Message");
         sendMessageButton.setOnAction(e -> sendMessage());
 
-        // Layout
         VBox createBox = new VBox(5, createLabel, aircraftTypeCombo, aircraftIdField,
                 fuelLevelField, operationTypeCombo, createButton);
         createBox.setPadding(new Insets(5));
