@@ -4,7 +4,7 @@ import IteratorPattern.Episode;
 
 import java.util.*;
 
-class ShuffleSeasonIterator implements EpisodeIterator {
+public class ShuffleSeasonIterator implements EpisodeIterator {
     private final List<Episode> shuffled;
     private int index = 0;
     public ShuffleSeasonIterator(List<Episode> episodes) {

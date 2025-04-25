@@ -4,9 +4,10 @@ import IteratorPattern.Episode;
 
 import java.util.List;
 
-class ReverseSeasonIterator implements EpisodeIterator {
+public class ReverseSeasonIterator implements EpisodeIterator {
     private List<Episode> episodes;
     private int index;
+
     public ReverseSeasonIterator(List<Episode> episodes) {
         this.episodes = episodes;
         this.index = episodes.size() - 1;
